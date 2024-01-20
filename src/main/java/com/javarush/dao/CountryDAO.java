@@ -12,7 +12,7 @@ public class CountryDAO {
     public CountryDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
-
+//
     public List<Country> getAll() {
         Query<Country> query = sessionFactory.getCurrentSession().createQuery("select c from Country c join fetch c.languages", Country.class);
         return query.list();
